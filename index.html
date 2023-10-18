@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000">
+  <title>Cine</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body class="bg-dark text-light">
+  <div id="container">
+    <div id="form">
+      <form id="miFormulario">
+        <div class="form-group">
+          <div class="row">
+            <div class="col-xl-4 col-lg-8 col-md-8 col-xs-12">
+              <label for="">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
+            <div class="col-xl-4 col-lg-8 col-md-8 col-xs-12">
+              <label for="">Correo:</label>
+              <input type="email" id="correo" name="correo" required />
+            </div>
+            <div class="col-xl-4 col-lg-8 col-md-8 col-xs-12">
+              <label for="">Boletos:</label>
+              <input type="number" id="boletos" name="boletos" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-12 col-lg-12  col-md-12 col-xs-12">
+              <label for="">Película:</label>
+              <select class="form-select" aria-label="Seleccione" id="pelicula"required>
+                <option selected>Seleccione</option>
+                <option value="scarface">Scarface</option>
+                <option value="scream">Scream</option>
+                <option value="infierno">El Infierno</option>
+                <option value="hostal">Hostal</option>
+                <option value="ciempies">El Ciempiés Humano</option>
+              </select>
+            </div>
+          </div>
+          <!-- <div class="row">
+            <div class="col-xl-12 col-lg-12  col-md-12 col-xs-12">
+              <button type="button" class="btn btn-primary editar">Editar</button>
+              <button type="button" class="btn btn-danger eliminar" >Eliminar</button>
+            </div>
+          </div> -->
+          <!-- <label for="">Imagen:</label> -->
+          <div class="imagen">
+            <img src="img/Seleccione.jpg" id="posterPelicula" /><br>
+          </div>
+          <button class="btn" type="submit" id="boton">
+            Guardar
+          </button>
+        </div>
+      </form>
+    </div>
+    <section class="d-grid gap-2 mb-3">
+      <article class="table-responsive">
+        <table class="table" id="tabla">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Correo</th>
+              <th>Pelicula</th>
+              <th>Poster</th>
+              <th>Boletos</th>
+              <th>Total</th>
+              <th>Editar/Eliminar</th>
+            </tr>
+          </thead>
+          <tbody id="miTabla"></tbody>
+        </table>
+      </article>
+    </section>
+    <div class="posters" style="display: none">
+      <img src="img/scarface.jpg" alt="" />
+      <img src="img/hostal.jpg" alt="" />
+      <img src="img/scream.jpg" alt="" />
+      <img src="img/ciempies.jpg" alt="" />
+      <img src="img/infierno.jpg" alt="" />
+    </div>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
